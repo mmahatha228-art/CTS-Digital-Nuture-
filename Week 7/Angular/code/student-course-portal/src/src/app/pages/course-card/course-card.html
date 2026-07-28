@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Available Courses</h2>
+
+  <div class="course-card" *ngFor="let course of courses" appHighlight>
+    <h3>{{ course.name }}</h3>
+    <p><strong>Trainer:</strong> {{ course.trainer }}</p>
+    <p><strong>Duration:</strong> {{ course.duration }}</p>
+    <p><strong>Fee:</strong> ₹{{ course.fee }}</p>
+    <p>
+      <strong>Status:</strong>
+      {{ course.available ? 'Available' : 'Not Available' }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<p>
+  Manage your courses, enroll online and track your academic progress.
+</p>
+
+<button [disabled]="!isPortalActive"
+        (click)="onEnrollClick()">
+  Enroll Now
+</button>
+
+<p>{{ message }}</p>
+
+<br><br>
+
+<input
+  type="text"
+  placeholder="Search course"
+  [(ngModel)]="searchTerm">
+
+<p>Searching for: {{ searchTerm }}</p>
+
+<hr>
+
+<p><strong>Courses Available:</strong> 12</p>
+<p><strong>Enrolled:</strong> 3</p>
+<p><strong>GPA:</strong> 3.8</p>
+
+<h2>Users</h2>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }} - {{ user.email }}
+  </li>
+</ul>

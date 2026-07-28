@@ -1,0 +1,30 @@
+<h2>Reactive Enrollment Form</h2>
+
+<form [formGroup]="enrollForm" (ngSubmit)="submit()">
+
+  <label>Name:</label><br>
+  <input type="text" formControlName="name">
+
+  <br><br>
+
+  <label>Email:</label><br>
+  <input type="email" formControlName="email">
+
+  <br><br>
+
+  <label>Course:</label><br>
+
+  <select formControlName="course">
+    <option value="">Select Course</option>
+    <option>Java</option>
+    <option>Angular</option>
+    <option>Python</option>
+  </select>
+
+  <br><br>
+
+  <button type="submit" [disabled]="enrollForm.invalid">
+    Submit
+  </button>
+
+</form>
